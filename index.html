@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>SMS Settings</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+			<div class="container">
+				<a href="#" class="navbar-brand">SMS Settings </a>
+				<button
+					class="navbar-toggler"
+					type="button"
+				>
+				</button>
+				<div class="collapse navbar-collapse" >
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#sms-settings">SMS Settings </a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#sms-activation">SMS Activation</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#sms-contents">SMS Contents</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- SMS settings -->
+		<section class="p-1" id="sms-settings">
+			<p class="lead text-primary ms-3">SMS Settings</p>
+			<div class="container bg-light g-3">
+				<form>
+					<div
+						class="mb-3 d-flex justify-content-between align-items-center border-bottom"
+					>
+						<div class="w-75">
+							<label class="col-form-label fw-bold fs-5"
+								>Service Provider
+							</label>
+							<p>
+								Select you SMS gateway service provider. If you can not find
+								your provider in the list contact us
+							</p>
+						</div>
+						<select
+							class="form-select w-25 h-25"
+						>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>
+					</div>
+					<div class="mb-3 w-50 border-bottom">
+						<label class="col-form-label fw-bold fs-5"
+							>Sender Name
+						</label>
+						<input type="text" class="form-control" />
+					</div>
+					<div class="mb-3 w-50 border-bottom">
+						<label class="col-form-label fw-bold fs-5"
+							>Token
+						</label>
+						<input type="text" class="form-control"  />
+					</div>
+				</form>
+			</section>
+
+				<!-- SMS activation -->
+			<section class="p-1" id="sms-activation">
+				<p class="lead text-primary ms-3">SMS Activation</p>
+				<div class="container bg-light g-3">
+				<form>
+					<div
+						class="mb-3 d-flex justify-content-between align-items-center border-bottom"
+					>
+						<div class="w-75">
+							<label class="col-form-label fw-bold fs-5"
+								>Address Verification SMS Active ?
+							</label>
+							<p>
+								This option sends a SMS with a link to customers to verify their address on the map
+							</p>
+						</div>
+						<div class="form-check form-switch">
+							<label class="switch" >
+								<input class="form-check-input swicth-input" type="checkbox"  checked>
+								
+							</label>
+							
+						</div>
+					</div>
+					<div
+						class="mb-3 d-flex justify-content-between align-items-center border-bottom"
+					>
+						<div class="w-75">
+							<label class="col-form-label fw-bold fs-5"
+								>Tracking SMS Active ?
+							</label>
+							<p>
+								This option sends a SMS with a link of branded tracking page when the order picked up by delivery company
+							</p>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" checked>
+						</div>
+					</div>
+					<div
+						class="mb-3 d-flex justify-content-between align-items-center border-bottom"
+					>
+						<div class="w-75">
+							<label  class="col-form-label fw-bold fs-5"
+								>Undelivered SMS Active ?
+							</label>
+							<p>
+								This option sends a SMS for failed delivery events to customers with a link that they can give feedback about the failed delivery reason
+							</p>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox"  checked>
+						</div>
+					</div>
+					<div
+						class="mb-3 d-flex justify-content-between align-items-center border-bottom"
+					>
+						<div class="w-75">
+							<label class="col-form-label fw-bold fs-5"
+								>Feedback SMS Active ?
+							</label>
+							<p>
+								This option sends a SMS after delivery of the order to end customer to get his feedback on the delivery experience
+							</p>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" checked>
+						</div>
+					</div>
+					<div
+						class="mb-3 d-flex justify-content-between align-items-center border-bottom"
+					>
+						<div class="w-75">
+							<label class="col-form-label fw-bold fs-5"
+								>Return SMS Send ?
+							</label>
+							<p>
+								This option sends a SMS with a return link where customers can submit their return request through a branded return page
+							</p>
+						</div>
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox"  checked>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		
+		<section class="p-1" id="sms-contents">
+			<p class="lead text-primary ms-3">SMS Contents</p>
+			<div mb-4>
+				<button href="/" id="arabic-btn" class="m-1 btn btn-dark">Arabic</button>
+				<button href="/" id="english-btn"class="m-1 btn btn-light border">English</button>
+			</div>
+			<div class="container bg-light g-3 mt-3">
+				<form>
+					<div class="input-group mb-3 border-bottom ">
+						<div class="mb-3 d-flex justify-content-between align-items-center ">
+							<div class="w-100 me-auto mt-1">
+								<label class=" fw-bold fs-5"
+									>Manual SMS Text (Keywords:clientName,orderId,link)?
+								</label>
+								<p>
+								Content the SMS for Manual SMS typeçUse the keywords as shown inside the SMS text
+								</p>
+							</div>
+							<div  class="position-absolute top-25 end-0">
+								<button href="/" id="manual-btn" class="m-1 btn btn-dark"><i class="bi bi-send text-light mx-1"></i>Test SMS</button>
+							</div>
+						</div>
+						<div class="w-100 mb-3">
+							<textarea class="form-control" aria-label="With textarea"></textarea>
+						</div>
+					</div>
+
+					<div class="input-group mb-3 border-bottom">
+						<div class="mb-3 d-flex justify-content-between align-items-center ">
+							<div class="w-100 me-auto mt-1">
+								<label class=" fw-bold fs-5"
+									>Address Verification SMS Text (Keywords:ON)?
+								</label>
+								<p>
+								Content the SMS for Manual SMS typeçUse the keywords as shown inside the SMS text
+								</p>
+							</div>
+							<div  class="position-absolute top-25 end-0">
+								<button href="/" id="address-btn"class="m-1 btn btn-dark"><i class="bi bi-send text-light mx-1"></i> Test SMS</button>
+							</div>
+						</div>
+						<div class="w-100 mb-3">
+							<textarea class="form-control" aria-label="With textarea"></textarea>
+						</div>
+					</div>
+
+					<div class="input-group mb-3 border-bottom">
+						<div class="mb-3 d-flex justify-content-between align-items-center ">
+							<div class="w-100 me-auto mt-1">
+								<label class=" fw-bold fs-5"
+									>Tracking SMS Text (Keywords:ON,TN,DC,link)?
+								</label>
+								<p>
+								Content the SMS for Manual SMS typeçUse the keywords as shown inside the SMS text
+								</p>
+							</div>
+							<div  class="position-absolute top-25 end-0">
+								<button href="/" id="track-btn"class="m-1 btn btn-dark"><i class="bi bi-send text-light mx-1"></i> Test SMS</button>
+							</div>
+						</div>
+						<div class="d-flex ">
+							<div >
+								<img  class=" m-1 "style="width: 100px; height: 200px "src="./img/temp1.jpeg"/>
+								<p class="text-center">Template 1</p>
+							</div>
+							<div>
+								<img  class=" m-1 "style="width: 100px; height: 200px " src="./img/temp1.jpeg"/>
+								<p class="text-center"> Template 2</p>
+							</div>
+							<div>
+								<img class=" m-1 "style="width: 100px; height: 200px "src="./img/temp1.jpeg"/>
+								<p class="text-center">Template 3</p>
+							</div>
+							<div>
+								<img class=" m-1 " style="width: 100px; height: 200px "src="./img/temp1.jpeg"/>
+								<p class="text-center">Template 4</p>
+							</div>
+						
+						</div>
+						<div class="w-100 mb-3">
+							<textarea class="form-control" aria-label="With textarea"></textarea>
+						</div>
+					</div>
+
+					<div class="input-group mb-3 border-bottom">
+						<div class="mb-3 d-flex justify-content-between align-items-center ">
+							<div class="w-100 me-auto mt-1">
+								<label class=" fw-bold fs-5"
+									>Undelivered SMS Text (Keywords:clientName,orderId,link)?
+								</label>
+								<p>
+								Content the SMS for Manual SMS typeçUse the keywords as shown inside the SMS text
+								</p>
+							</div>
+							<div  class="position-absolute top-25 end-0">
+								<button href="/" id="undelivered-btn"class="m-1 btn btn-dark"><i class="bi bi-send text-light mx-1"></i> Test SMS</button>
+							</div>
+						</div>
+						<div class="w-100 mb-3">
+							<textarea class="form-control" aria-label="With textarea"></textarea>
+						</div>
+					</div>
+
+					<div class="input-group mb-3 border-bottom">
+						<div class="mb-3 d-flex justify-content-between align-items-center ">
+							<div class="w-100 me-auto mt-1">
+								<label class=" fw-bold fs-5"
+									>Feedback SMS Text (Keywords:clientName,orderId,link)?
+								</label>
+								<p>
+								Content the SMS for Manual SMS typeçUse the keywords as shown inside the SMS text
+								</p>
+							</div>
+							<div  class="position-absolute top-25 end-0">
+								<button href="/" id="feedback-btn"class="m-1 btn btn-dark"><i class="bi bi-send text-light mx-1"></i> Test SMS</button>
+							</div>
+						</div>
+						<div class="w-100 mb-3">
+							<textarea class="form-control" aria-label="With textarea"></textarea>
+						</div>
+					</div>
+
+					<div class="input-group mb-3 border-bottom">
+						<div class="mb-3 d-flex justify-content-between align-items-center ">
+							<div class="w-100 me-auto mt-1">
+								<label class=" fw-bold fs-5"
+									>Return SMS Text 
+								</label>
+								<p>
+								Content the SMS for Manual SMS typeçUse the keywords as shown inside the SMS text
+								</p>
+							</div>
+						</div>
+						<div class="w-100 mb-3">
+							<textarea class="form-control" aria-label="With textarea"></textarea>
+						</div>
+					</div>
+
+					<div class="input-group mb-3 border-bottom">
+						<div class="mb-3 d-flex justify-content-between align-items-center ">
+							<div class="w-100 me-auto mt-1">
+								<label class=" fw-bold fs-5"
+									>Click and Collect SMS Text 
+								</label>
+								<p>
+								Content the SMS for Manual SMS typeçUse the keywords as shown inside the SMS text
+								</p>
+							</div>
+						</div>
+						<div class="w-100 mb-3">
+							<textarea class="form-control" aria-label="With textarea"></textarea>
+						</div>
+					</div>
+			</form>
+		</div>
+	</section>
+	
+
+
+		<!-- ///// -->
+	
+		<script src="main.js"></script>
+	</body>
+</html>
